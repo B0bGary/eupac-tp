@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EUPAC-TP Seminar Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8f8f8;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2, p {
+      text-align: center;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Embed styling & centering --- */
+    .embed-center {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    .embeddable_schedule {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .embeddable_schedule table {
+      margin: 0 auto !important;
+      width: auto !important;
+      max-width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .embeddable_schedule th, 
+    .embeddable_schedule td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    .embeddable_schedule th {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .embeddable_schedule tr:hover {
+      background-color: #f9f9f9;
+    }
+  </style>
+
+  <link rel="icon" type="image/png" sizes="600x600" href="/eupac_temp2.png">
+</head>
+
+<body>
+  <h1>EUPAC-TP Seminar Series</h1>
+  <div style="text-align: center;">
+  <img src="eupac_temp2.png" alt="Temp Logo" style="max-width:100px;">
+  </div>
+  <p>This is the webpage for the <i>European and Pacific Theoretical Physics</i> Seminar series.</p><p>
+  European and Pacific Theoretical Physics is a group that runs online seminars and talks across broad topics in mathematical and theoretical physics. Our goal is to share concepts across continents to bring about a deeper understanding of cutting-edge topics in physics.
+  </p><p>Our current focus for latter half of 2025 is <i>Generalised (Categorical) Symmetries</i>.</p>
+  
+      <p>Subscribe to your preferred calendar app to automatically keep up to date with the seminars!</p>
+<div style="display: flex; justify-content: center; gap: 10px; align-items: center; margin-bottom: 20px;">
+    <a href="https://calendar.google.com/calendar/render?cid=http%3A%2F%2Fresearchseminars.org%2Fseminar%2FEUPAC-TP%2Fics" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;">
+        <i class="fab fa-google" style="color: #4285F4;"></i> Google Calendar
+    </a>
+    <a href="https://researchseminars.org/seminar/EUPAC-TP/ics" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 5px;">
+        <i class="fas fa-calendar-alt" style="color: #0A66C2;"></i> iCal/Outlook
+    </a>
+</div>
+
+  <h2>Future EUPAC-TP Seminars</h2>
+ <!--   <p>This list is updated automatically from ResearchSeminars.org.</p> -->
+  <div class="embed-center">
+    <div class="embeddable_schedule" shortname="EUPAC-TP" daterange="future"></div>
+  </div>
+
+  <h2>Past EUPAC-TP Seminars</h2>
+  <div class="embed-center">
+    <div class="embeddable_schedule" shortname="EUPAC-TP" daterange="past"></div>
+  </div>
+
+  <!-- Load embed script once -->
+  <script src="https://researchseminars.org/embed_seminars.js"
+          onload="seminarEmbedder.initialize({'addCSS': true});"></script>
+
+  <!-- JS to center injected tables -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.embeddable_schedule').forEach(el => {
+        const inner = el.querySelector('table, div, iframe');
+        if (inner) inner.style.margin = '0 auto';
+      });
+    });
+  </script>
+  
+<h2>Organisers</h2>
+<div style="display: flex; justify-content: center;">
+  <ul style="list-style-position: inside; text-align: left;">
+    <li><strong>Jesse Woods</strong> (University of Bern)</li>
+    <li><strong>Jonathan Skelton</strong> (University of Sydney)</li>
+	    <li><strong> Adèle Le Borgne</strong> (University of Bern)</li>
+    <li><strong>Joey Faller</strong> (University of Queensland)</li>
+  </ul>
+</div>
+</body>
+</html>
